@@ -103,12 +103,137 @@
           <div class="row">
             <div class="col-md-12">
               <div class="work-entry animate-box">
+                <div class="col-md-8 col-md-offset-5">
+                  <h2>Motivation</h2>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                  <p>
+                    The large number in statistics is essential to validate the
+                    statement. However, manual collection is boring and time
+                    consuming. In this work, the collection was done by a fully
+                    automatic system which combines my projects of
+                    <a href="https://github.com/tehsinchen/Eff-Unet-Keras"
+                      >segmentation</a
+                    >
+                    for moving a cell to the center of the field of view (FOV)
+                    and
+                    <a href="https://github.com/tehsinchen/Deep_Autofocus"
+                      >key frame detection</a
+                    >
+                    for finding the desired focal plane.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="work-entry animate-box">
+              <div class="col-md-12">
+                <div class="col-md-5 col-md-offset-1">
+                  <div class="desc">
+                    <p>Human behavior on microscope:</p>
+                    <ul>
+                      <li>
+                        <b>Stage adjustment:</b> identify the object and move it
+                        to the center of the field of view
+                      </li>
+                      <br />
+                      <li>
+                        <b>Focus scanning:</b> adjust the focal plane back and
+                        forth to ensure features are sharp and clear
+                      </li>
+                      <br />
+                      <li>
+                        <b>Quality control:</b> record if the quality of cell
+                        meets the demand
+                      </li>
+                      <br />
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-5 col-md-offset-1">
+                  <div class="desc">
+                    <p>How machine can reproduce the operation</p>
+                    <ul>
+                      <li>
+                        <b>Segmentation:</b> define outlines around cells to
+                        separate them from the background
+                      </li>
+                      <br />
+                      <li>
+                        <b>Auto focus:</b> adjust the height to obtain the
+                        highest-quality images from a set of cell images at
+                        different focal planes
+                      </li>
+                      <li>
+                        <b>Binary classification:</b> verify that the quality of
+                        the cell image meets human expectations
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="work-entry animate-box">
+              <div class="col-md-12">
+                <div class="col-md-5 col-md-offset-1 intro-heading">
+                  <h2>Cell Segmentation</h2>
+                  <p>
+                    The Eff-UNet model converts raw images into a binary mask
+                    that highlights the cell. This mask helps the machine locate
+                    the cell within the image
+                  </p>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                  <img
+                    class="img-responsive"
+                    src="images/cell_mask.gif"
+                    alt="html5bootstrap template by colorlib.com"
+                  /><br />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="work-entry animate-box">
+              <div class="col-md-12">
+                <div class="col-md-6 col-md-offset-1 intro-heading">
+                  <h2>Autofocus</h2>
+                  <p>
+                    In microscopy, keeping objects in focus is crucial. Over
+                    time, the stage can shift, causing both sideways and
+                    up-and-down drift. Automated machine correction is essential
+                    for maintaining focus during long measurements.
+                  </p>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                  <img
+                    class="img-responsive"
+                    src="images/demo_axial.gif"
+                    alt="html5bootstrap template by colorlib.com"
+                  /><br />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="work-entry animate-box">
                 <div class="col-md-8 col-md-offset-2">
                   <div class="desc">
                     <h2>Demonstration</h2>
                     <p>
-                      The process of centralization, recording and saving were
-                      speeded up 15x and 0.8x for finding the focal plane.
+                      This demo speeds up moving cells to the center, recording,
+                      and saving by 15 times, and finds the desired focal plane
+                      0.8 times slower. The operation is achieved by integrating
+                      the light source, shutter, stage, and camera.
                     </p>
                   </div>
                 </div>
@@ -129,11 +254,10 @@
                 <div class="col-md-5 col-md-offset-1 intro-heading">
                   <h2>Result</h2>
                   <p>
-                    Next are the 143 cells (images) that were automatically and
-                    consecutively collected for three hours. Moreover, an
-                    additional machine trained with binary classification was
-                    included in this project for controlling the quality so that
-                    it does not require manual selection of results.
+                    Cells were automatically captured in images over three
+                    hours. A separate machine, trained to classify images,
+                    ensured quality control, eliminating the need for manual
+                    review.
                   </p>
                 </div>
                 <div class="col-md-5 col-md-offset-1">
@@ -146,53 +270,6 @@
               </div>
             </div>
           </div>
-
-          <div class="row">
-            <div class="work-entry animate-box">
-              <div class="col-md-8 col-md-offset-0">
-                <h2>Imitating the human</h2>
-              </div>
-              <div class="col-md-12">
-                <div class="col-md-6 col-md-offset-0">
-                  <div class="desc">
-                    <p>Human behavior on microscopy:</p>
-                    <ul>
-                      <li>Move the object to the center of view</li>
-                      <br />
-                      <li>Adjust the focal plane to the desire height</li>
-                      <br />
-                      <li>Rrcord if the quality of object meets the demand</li>
-                      <br />
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-md-offset-0">
-                  <div class="desc">
-                    <p>How machine can take control of the operation</p>
-                    <ul>
-                      <li>
-                        Perform cell <b>segmentation</b> on the microscopy field
-                        of view, make the mask to the center if find any.
-                      </li>
-                      <li>
-                        <b>Binary classification</b> for selecting the cloest
-                        image quality defined by humane while scanning through
-                        the focal plane
-                      </li>
-                      <li>
-                        <b>Binary classification</b> for excluding the bad
-                        quality defined by human
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row"></div>
-          <!-- cell segmentation -->
         </div>
       </div>
     </div>
