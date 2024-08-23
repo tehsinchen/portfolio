@@ -104,24 +104,52 @@
             <div class="col-md-12">
               <div class="work-entry animate-box">
                 <div class="col-md-8 col-md-offset-5">
-                  <h2>Motivation</h2>
+                  <h2>Introduction</h2>
                 </div>
-                <div class="col-md-8 col-md-offset-2">
-                  <p>
-                    The large number in statistics is essential to validate the
-                    statement. However, manual collection is boring and time
-                    consuming. In this work, the collection was done by a fully
-                    automatic system which combines my projects of
+                <div class="col-md-10 col-md-offset-1">
+                  <p class="text-justify">
+                    To validate scientific findings, a large amount of data is
+                    essential. However, manually collecting this data in
+                    microscopy is both tedious and time-consuming.
+                    Deep-auto-search harnesses the power of deep learning to
+                    automate the complex, repetitive tasks in microscopy,
+                    effectively taking over from humans. This technology
+                    autonomously captures high-quality cell images. In this
+                    work, data collection was fully automated, integrating my
+                    projects on
                     <a href="https://github.com/tehsinchen/Eff-Unet-Keras"
-                      >segmentation</a
+                      >cell segmentation</a
                     >
-                    for moving a cell to the center of the field of view (FOV)
-                    and
+                    , which centers cells in the field of view (FOV), and
                     <a href="https://github.com/tehsinchen/Deep_Autofocus"
                       >key frame detection</a
-                    >
-                    for finding the desired focal plane.
+                    >, which identifies the optimal focal plane.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="work-entry animate-box">
+                <div class="col-md-8 col-md-offset-1">
+                  <h2>Demonstration</h2>
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                  <p class="text-justify">
+                    This demo speeds up moving cells to the center, recording,
+                    and saving by 15 times, and finds the desired focal plane
+                    0.8 times slower. The operation is achieved by integrating
+                    the light source, shutter, stage, and camera.
+                  </p>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                  <img
+                    class="img-responsive"
+                    src="images/auto_search_demo.gif"
+                    alt="html5bootstrap template by colorlib.com"
+                  /><br />
                 </div>
               </div>
             </div>
@@ -183,7 +211,7 @@
               <div class="col-md-12">
                 <div class="col-md-5 col-md-offset-1 intro-heading">
                   <h2>Cell Segmentation</h2>
-                  <p>
+                  <p class="text-justify">
                     The Eff-UNet model converts raw images into a binary mask
                     that highlights the cell. This mask helps the machine locate
                     the cell within the image
@@ -205,7 +233,7 @@
               <div class="col-md-12">
                 <div class="col-md-6 col-md-offset-1 intro-heading">
                   <h2>Autofocus</h2>
-                  <p>
+                  <p class="text-justify">
                     In microscopy, keeping objects in focus is crucial. Over
                     time, the stage can shift, causing both sideways and
                     up-and-down drift. Automated machine correction is essential
@@ -224,43 +252,18 @@
           </div>
 
           <div class="row">
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                  <div class="desc">
-                    <h2>Demonstration</h2>
-                    <p>
-                      This demo speeds up moving cells to the center, recording,
-                      and saving by 15 times, and finds the desired focal plane
-                      0.8 times slower. The operation is achieved by integrating
-                      the light source, shutter, stage, and camera.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-8 col-md-offset-2">
-                  <img
-                    class="img-responsive"
-                    src="images/auto_search_demo.gif"
-                    alt="html5bootstrap template by colorlib.com"
-                  /><br />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
             <div class="work-entry animate-box">
               <div class="col-md-12">
                 <div class="col-md-5 col-md-offset-1 intro-heading">
                   <h2>Result</h2>
-                  <p>
+                  <p class="text-justify">
                     Cells were automatically captured in images over three
                     hours. A separate machine, trained to classify images,
                     ensured quality control, eliminating the need for manual
                     review.
                   </p>
                 </div>
-                <div class="col-md-5 col-md-offset-1">
+                <div class="col-md-4 col-md-offset-2">
                   <img
                     class="img-responsive"
                     src="images/auto_search.gif"
