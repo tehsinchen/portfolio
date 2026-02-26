@@ -55,7 +55,7 @@
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="work.html">Work</a></li>
-                <li><a href="work_cloud.html">Back</a></li>
+                <li><a href="work_dev.html">Back</a></li>
               </ul>
             </div>
           </div>
@@ -89,13 +89,13 @@
             <div
               class="col-md-12 col-md-offset-0 text-center animate-box intro-heading"
             >
-              <h2>Website for Database Management</h2>
+              <h2>MLOps Development</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="rotate">
-                <h2 class="heading">database management</h2>
+                <h2 class="heading">MLOps development</h2>
               </div>
             </div>
           </div>
@@ -103,10 +103,10 @@
           <div class="row">
             <div class="work-entry animate-box">
               <div class="col-md-12">
-                <div class="col-md-6 col-md-offset-3">
+                <div class="col-md-12 col-md-offset-0">
                   <img
                     class="img-responsive"
-                    src="images/aws_web.png"
+                    src="images/ml_mind_map.png"
                     alt="html5bootstrap template by colorlib.com"
                   /><br />
                 </div>
@@ -117,104 +117,37 @@
           <div class="row">
             <div class="work-entry animate-box">
               <div class="col-md-12">
-                <h2>Major completed features</h2>
                 <div class="col-md-12 col-md-offset-0">
-                  <h3>Data Organization</h3>
+                  <h2>Summary</h2>
+                  <h3>Experiment Tracking</h3>
                   <p class="text-justify">
-                    Data is structured systematically, allowing users to locate
-                    and access information effortlessly, particularly in large
-                    datasets.
+                    An MLflow server hosted on Amazon SageMaker provides centralized experiment tracking and artifact management. Provisioning through Terraform ensures the setup is consistent, repeatable, and easy to maintain across stages.
                   </p>
-                  <ul>
-                    <li>
-                      Predefined input fields ensure the accuracy and
-                      consistency of information entered.
-                      <img
-                        class="img-responsive"
-                        src="images/aws_web_1.png"
-                        alt="html5bootstrap template by colorlib.com"
-                      /><br />
-                    </li>
-                    <li>
-                      Dropdown menus standardize terminology, preventing
-                      inconsistencies in user input.
-                      <img
-                        class="img-responsive"
-                        src="images/aws_web_2.png"
-                        alt="html5bootstrap template by colorlib.com"
-                      /><br />
-                    </li>
-                    <li>
-                      Consistent terminology enhances the ease of retrieving
-                      relevant information.
-                      <img
-                        class="img-responsive"
-                        src="images/aws_web_3.png"
-                        alt="html5bootstrap template by colorlib.com"
-                      /><br />
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-12 col-md-offset-0">
-                  <h3>Data Integrity</h3>
+                  <img
+                    class="img-responsive"
+                    src="images/mlflow_exp.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  /><br /><br />
+                  <h3>Ready‑to‑Use Training Environment</h3>
                   <p class="text-justify">
-                    Accuracy, consistency, and reliability are upheld through
-                    every update and transaction, ensuring trust in the data.
+                    An one‑click Jenkins pipeline delivers ready‑to‑work SageMaker notebook environment. On‑create and on‑start lifecycle configurations preinstall dependencies and bootstrap settings so users can begin immediately without manual setup.
                   </p>
-                  <ul>
-                    <li>
-                      Logical checks prevent manual errors, automating the
-                      validation process to maintain data quality and integrity
-                      across the system.
-                    </li>
-                    <div class="col-md-12 col-md-offset-0">
-                      <img
-                        class="img-responsive"
-                        src="images/aws_web_4.png"
-                        alt="html5bootstrap template by colorlib.com"
-                      /><br />
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="work-entry animate-box">
-              <div class="col-md-12">
-                <h2>Contribution</h2>
-                <div class="col-md-12 col-md-offset-0">
-                  <h3>1. Needs Assessment and Integration</h3>
+                  <img
+                    class="img-responsive"
+                    src="images/notebook_env.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  /><br /><br />
+                  <h3>Local‑to‑Cloud Continuity</h3>
                   <p class="text-justify">
-                    Led the planning phase by gathering and integrating
-                    requirements from various departments, ensuring that all
-                    stakeholders’ needs were aligned with the project's
-                    objectives.
+                    Development starts wherever it’s most convenient—often on a local machine. Code and data are pushed to a remote repository and pulled into the cloud notebook, ensuring consistent results and a frictionless transition between environments.
                   </p>
-                  <h3>2. Project Management and Consultancy</h3>
+                  <h3>Data Management and Lineage</h3>
                   <p class="text-justify">
-                    Managed the entire project lifecycle, from initial design to
-                    final deployment, while also providing expert consultancy to
-                    ensure that the technical and operational aspects were
-                    executed efficiently.
+                    Data Version Control (DVC) with Amazon S3 as the backend keeps datasets and artifacts versioned and trackable. This creates a clear lineage from raw data to trained models, aligning data states with experiments and deployments.
                   </p>
-                  <h3>3. Frontend Construction Using JSON</h3>
+                  <h3>Automated Deployment</h3>
                   <p class="text-justify">
-                    Developed a well-structured JSON file that served as the
-                    primary source for frontend engineers to build the user
-                    interface. This approach defined all the rules and
-                    relationships between inputs, reducing the need for frequent
-                    communication while improving the future maintainability of
-                    the system.
-                  </p>
-                  <h3>4. Dockerization and AWS Architecture</h3>
-                  <p class="text-justify">
-                    Dockerized the application to enable seamless deployment on
-                    Amazon ECS via GitLab CI/CD pipelines. Additionally,
-                    designed and implemented the AWS architecture to support the
-                    application, ensuring scalability, reliability, and
-                    efficient cloud resource management.
+                    A Jenkins pipeline promotes and deploys the champion model automatically. This reduces manual intervention, enforces a reliable release process.
                   </p>
                 </div>
               </div>
