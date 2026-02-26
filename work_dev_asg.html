@@ -55,6 +55,7 @@
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="work.html">Work</a></li>
+                <li><a href="work_dev.html">Back</a></li>
               </ul>
             </div>
           </div>
@@ -88,71 +89,51 @@
             <div
               class="col-md-12 col-md-offset-0 text-center animate-box intro-heading"
             >
-              <h2>Development</h2>
+              <h2>Autoscaling with Observability (IaC)</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="rotate">
-                <h2 class="heading">Portfolio</h2>
+                <h2 class="heading">Autoscaling</h2>
               </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                  <div class="desc">
-                    <h2>GitLab CI</h2>
-                    <p class="text-justify">
-                      Refactored GitLab CI from linear stages to a DAG with aggressive parallelism, smart caching, and targeted artifacts. Moved I/O‑heavy performance tests to on‑prem storage near runners. Result: ~50% faster CI and ≥12 hours shaved from performance testing, significantly improving developer throughput and release reliability.
-                    </p>
-                    <p class="read">
-                      <a href="work_dev_gitlab_ci.html">View Detail</a>
-                    </p>
-                  </div>
+            <div class="work-entry animate-box">
+              <div class="col-md-12">
+                <div class="col-md-12 col-md-offset-0">
+                  <h3>Objective</h3>
+                  <p class="text-justify">
+                    A secure, cost‑efficient, and fully automated infrastructure that scales on demand, operates entirely within private subnets, and exposes clear, real‑time observability-built and managed end‑to‑end with Infrastructure as Code.
+                  </p>
+                  <h3>Architecture Overview</h3>
+                  <p class="text-justify">
+                    Traffic flows from a private JMeter runner to an internal load balancer, then to application targets. Health checks validate service readiness. All resources live in private subnets within a dedicated VPC, with VPC Interface Endpoints enabling access without touching the public internet.
+                    Find the repository <a href="https://github.com/tehsinchen/Demo-EC2-AutoScaling">here</a>.
+                  </p>
+                  <h3>Reproducible Load Generation</h3>
+                  <p class="text-justify">
+                    A Packer‑baked Amazon Machine Image includes JMeter and its dependencies, ensuring consistent, repeatable load tests across environments. Baking dependencies into the image removes the need for internet access during instance startup and shortens bootstrap time.
+                  </p>
+                  <h3>Scaling Strategy</h3>
+                  <p class="text-justify">
+                    Step Scaling policies react to sustained CPU utilization and ALB request rates. Warmup, cooldown, and evaluation periods are tuned to prevent flapping, while health‑check grace periods protect new instances as they come online. The result is responsive scale‑out under pressure and cautious scale‑in during calm.
+                  </p>
+                  <h3>Observability Built‑In</h3>
+                  <p class="text-justify">
+                    A CloudWatch dashboard ships with the stack and visualizes the signals that matter: CPU trends, scaling activities, in‑service capacity, request volume, latency percentiles, error breakdowns, and target health. This creates a closed feedback loop from synthetic load to telemetry to scaling decisions.
+                  </p>
+                  <img
+                    class="img-responsive"
+                    src="images/asg_dashboard.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  />
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                  <div class="desc">
-                    <h2>MLOps</h2>
-                    <p class="text-justify">
-                      A streamlined pipeline that minimizes manual actions and enables effortless movement from local development to a fully managed cloud environment. It emphasizes reproducibility, traceability, and speed—so teams can start fast, iterate confidently, and ship models reliably.
-                    </p>
-                    <p class="read">
-                      <a href="work_dev_mlops.html">View Detail</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                  <div class="desc">
-                    <h2>EC2 Autoscaling</h2>
-                    <p class="text-justify">
-                      An end‑to‑end Infrastructure‑as‑Code project that bakes a JMeter AMI, deploys an internal ALB fronting an EC2 Auto Scaling Group, drives synthetic load from a private JMeter runner, and ships a CloudWatch dashboard to validate scaling behavior in real time—all without Internet/NAT Gateways.
-                    </p>
-                    <p class="read">
-                      <a href="work_dev_asg.html">View Detail</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -175,3 +156,4 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+<!-- data, training, result,  -->
