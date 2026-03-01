@@ -55,6 +55,7 @@
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="work.html">Work</a></li>
+                <li><a href="work_dev.html">Back</a></li>
               </ul>
             </div>
           </div>
@@ -88,89 +89,71 @@
             <div
               class="col-md-12 col-md-offset-0 text-center animate-box intro-heading"
             >
-              <h2>Development</h2>
+              <h2>Immutable DevOps with GitOps on AWS (IaC)</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="rotate">
-                <h2 class="heading">Portfolio</h2>
+                <h2 class="heading">Kubernetes with ArgoCD</h2>
               </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                  <div class="desc">
-                    <h2>GitLab CI</h2>
-                    <p class="text-justify">
-                      Refactored GitLab CI from linear stages to a DAG with aggressive parallelism, smart caching, and targeted artifacts. Moved I/O‑heavy performance tests to on‑prem storage near runners. Result: ~50% faster CI and ≥12 hours shaved from performance testing, significantly improving developer throughput and release reliability.
-                    </p>
-                    <p class="read">
-                      <a href="work_dev_gitlab_ci.html">View Detail</a>
-                    </p>
-                  </div>
+            <div class="work-entry animate-box">
+              <div class="col-md-12">
+                <div class="col-md-12 col-md-offset-0">
+                  <h3>Purpose</h3>
+                  <p class="text-justify">
+                    Deliver a scalable, and maintainable DevOps foundation that is fully automated. The system uses Infrastructure as Code to provision everything from CI runners to the Kubernetes cluster, ensuring consistent results and rapid, reliable releases.
+                    Find the repository <a href="https://github.com/tehsinchen/Demo-Flight-Delay">here</a>.
+                  </p>
+                  <h3>Immutable Infrastructure</h3>
+                  <p class="text-justify">
+                    Golden AMIs (Amazon Machine Images) are baked for both the GitHub Actions runners and the k3s cluster. All dependencies, tools, and orchestration components are included at image build time, enabling deterministic boots, faster startup, and zero configuration drift during runtime.
+                  </p>
+                  <h3>End‑to‑End IaC Orchestration</h3>
+                  <p class="text-justify">
+                    Terraform composes all infrastructure—runners, Kubernetes nodes, networking, and registries—while Packer standardizes machine images. The result is a repeatable pipeline for building, deploying, and operating the entire stack, from infrastructure to application workloads.
+                  </p>
+                  <img
+                    class="img-responsive"
+                    src="images/runner_1.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  />
+                  <img
+                    class="img-responsive"
+                    src="images/argocd_1.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  />
+                  <img
+                    class="img-responsive"
+                    src="images/argocd_2.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  /><br><br>
+                  <h3>Environment Parity by Design</h3>
+                  <p class="text-justify">
+                    Kustomize overlays provide clean separation between development and production while inheriting a common base. This approach keeps configuration consistent, reduces duplication, and ensures features and fixes progress through environments without surprises.
+                  </p>
+                  <h3>Continuous Delivery with GitOps</h3>
+                  <p class="text-justify">
+                    ArgoCD is embedded into the Kubernetes AMI and automatically bootstraps applications from the GitHub repository on launch. Sync behavior is tuned with ApplyOutOfSyncOnly, which ensures only out‑of‑sync resources are reconciled, keeping changes intentional and auditable.
+                  </p>
+                  <img
+                    class="img-responsive"
+                    src="images/gitops_1.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  />
+                  <img
+                    class="img-responsive"
+                    src="images/gitops_2.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  />
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                  <div class="desc">
-                    <h2>MLOps</h2>
-                    <p class="text-justify">
-                      A streamlined pipeline that minimizes manual actions and enables effortless movement from local development to a fully managed cloud environment. It emphasizes reproducibility, traceability, and speed—so teams can start fast, iterate confidently, and ship models reliably.
-                    </p>
-                    <p class="read">
-                      <a href="work_dev_mlops.html">View Detail</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                  <div class="desc">
-                    <h2>EC2 Autoscaling</h2>
-                    <p class="text-justify">
-                      An end‑to‑end Infrastructure‑as‑Code project that bakes a JMeter AMI, deploys an internal ALB fronting an EC2 Auto Scaling Group, drives synthetic load from a private JMeter runner, and ships a CloudWatch dashboard to validate scaling behavior in real time—all without Internet/NAT Gateways.
-                    </p>
-                    <p class="read">
-                      <a href="work_dev_asg.html">View Detail</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <div class="work-entry animate-box">
-                <div class="col-md-8 col-md-offset-2">
-                  <div class="desc">
-                    <h2>Kubernetes with ArgoCD on AWS (IaC)</h2>
-                    <p class="text-justify">
-                      A complete, production‑style path from source to running services on AWS. Microservices (frontend, backend, and data crawler) deploy onto a lightweight Kubernetes cluster, while self‑hosted GitHub Actions runners handle CI. Every layer is defined, built, and operated through Terraform, Packer, and ArgoCD.
-                    </p>
-                    <p class="read">
-                      <a href="work_dev_k8s.html">View Detail</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -193,3 +176,4 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+<!-- data, training, result,  -->
