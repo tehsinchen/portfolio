@@ -104,11 +104,34 @@
             <div class="work-entry animate-box">
               <div class="col-md-12">
                 <div class="col-md-12 col-md-offset-0">
+                  <img
+                    class="img-responsive"
+                    src="images/gitops.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  /><br />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="work-entry animate-box">
+              <div class="col-md-12">
+                <div class="col-md-12 col-md-offset-0">
                   <h3>Purpose</h3>
                   <p class="text-justify">
-                    Deliver a scalable, and maintainable DevOps foundation that is fully automated. The system uses Infrastructure as Code to provision everything from CI runners to the Kubernetes cluster, ensuring consistent results and rapid, reliable releases.
+                    Deliver a scalable, and maintainable DevOps foundation that is fully automated. The system uses Infrastructure as Code to provision everything from GitLab runners to the Kubernetes cluster, ensuring consistent results and rapid, reliable releases.
                     Find the repository <a href="https://github.com/tehsinchen/Demo-Flight-Delay">here</a>.
                   </p>
+                  <h3>Microservices Architecture</h3>
+                  <p class="text-justify">
+                    The k3s cluster orchestrates microservices exposed via a Traefik ingress controller. Path-based routing dynamically directs external traffic to operational interfaces (ArgoCD, Kibana) and application components (Frontend, Backend). A decoupled data crawler operates as a periodic CronJob, independently writing to the backend MySQL database to ensure background batch processing does not impact user-facing API performance.
+                  </p>
+                  <img
+                    class="img-responsive"
+                    src="images/k3s_arch.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  /><br><br>
                   <h3>Immutable Infrastructure</h3>
                   <p class="text-justify">
                     Golden AMIs (Amazon Machine Images) are baked for both the GitHub Actions runners and the k3s cluster. All dependencies, tools, and orchestration components are included at image build time, enabling deterministic boots, faster startup, and zero configuration drift during runtime.
@@ -132,9 +155,9 @@
                     src="images/argocd_2.png"
                     alt="html5bootstrap template by colorlib.com"
                   /><br><br>
-                  <h3>Environment Parity by Design</h3>
+                  <h3>Hybrid Helm & Kustomize Orchestration</h3>
                   <p class="text-justify">
-                    Kustomize overlays provide clean separation between development and production while inheriting a common base. This approach keeps configuration consistent, reduces duplication, and ensures features and fixes progress through environments without surprises.
+                    A hybrid configuration approach maximizes reusability while maintaining environment parity. A local Helm chart acts as the single source of truth, managing base manifests and conditional resource toggling. Kustomize natively inflates this chart during the build phase to seamlessly apply environment-specific overlays (such as resource limits and replica counts). This delivers the advanced templating power of Helm without sacrificing Kustomize's clean patch management.
                   </p>
                   <h3>Continuous Delivery with GitOps</h3>
                   <p class="text-justify">
@@ -148,6 +171,33 @@
                   <img
                     class="img-responsive"
                     src="images/gitops_2.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  /><br><br>
+                  <h3>Observability with the ELK Stack</h3>
+                  <p class="text-justify">
+                    Operational health is proactively monitored through an integrated ELK stack (Elasticsearch, Kibana, Fluent-bit). Fluent-bit operates as a DaemonSet, utilizing a custom Lua script to dynamically compute Elasticsearch index prefixes based on Kubernetes namespaces and application labels, ensuring clean data separation across environments.
+                  </p>
+                  <img
+                    class="img-responsive"
+                    src="images/elk_1.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  /><br>
+                  <p>
+                    Kibana visualizes this aggregated data through tailored operational dashboards. Custom visualizations include microservice log volume distribution to spot anomalous traffic, time-series error rate tracking isolated strictly to stderr streams, and dedicated execution ledgers for batch CronJobs. This comprehensive visibility enables rapid anomaly detection and precise troubleshooting.
+                  </p>
+                  <img
+                    class="img-responsive"
+                    src="images/elk_2.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  />
+                  <img
+                    class="img-responsive"
+                    src="images/elk_3.png"
+                    alt="html5bootstrap template by colorlib.com"
+                  />
+                  <img
+                    class="img-responsive"
+                    src="images/elk_4.png"
                     alt="html5bootstrap template by colorlib.com"
                   />
                 </div>
