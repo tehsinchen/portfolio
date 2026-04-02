@@ -486,45 +486,6 @@
         </div>
       </div>
 
-      <div class="slide">
-        <div class="content-split">
-          <div class="text-col">
-            <h2>Performance Testing & Auto Scaling</h2>
-            <ul>
-              <li><strong>Goal:</strong> To build confidence in handling high-traffic events, I designed a cost-optimized environment to visualize Auto Scaling mechanics under synthetic load.</li>
-              <li>Bypassed costly NAT Gateways by using <span class="highlight">Packer</span> to bake JMeter and JDK directly into the AMI.</li>
-              <li><strong>Security:</strong> 100% private subnets.</li>
-              <li>Access managed securely via VPC Endpoints for Session Manager.</li>
-            </ul>
-          </div>
-          <div class="visual-col">
-            <img src="images/interview_asg.png" class="full-height" alt="VPC and ASG Architecture" />
-          </div>
-        </div>
-      </div>
-
-      <div class="slide">
-        <div class="content-split">
-          <div class="text-col">
-            <h2>Validating Scaling Mechanics</h2>
-            <ul>
-              <li>Provisioned a custom CloudWatch dashboard via Terraform to track the exact metrics driving the ASG.</li>
-              <li><strong>The Workflow:</strong>
-                <ol type="1" style="font-size: 1.4rem; line-height: 1.6; color: #cbd5e1; margin-top: 10px;">
-                  <li style="padding-left: 10px">Trigger JMeter from the private runner.</li>
-                  <li style="padding-left: 10px">Watch the CPU usage and ALB RequestCount spike on the dashboard.</li>
-                  <li style="padding-left: 10px">Observe the CloudWatch Alarm status.</li>
-                  <li style="padding-left: 10px">Validate the ASG <span class="highlight">seamlessly step-scaling out</span> to handle the load.</li>
-                </ol>
-              </li>
-            </ul>
-          </div>
-          <div class="visual-col">
-            <img src="images/interview_dashboard.png" class="full-height" alt="CloudWatch Dashboard" />
-          </div>
-        </div>
-      </div>
-
       <div class="slide center-slide">
         <h1 style="font-size: 4rem">Thank You</h1>
         <div style="margin-top: 40px; font-size: 1.4rem; line-height: 2; display: inline-flex; gap: 40px;">
